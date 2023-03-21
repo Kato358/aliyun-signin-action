@@ -3,7 +3,7 @@ name: Aliyun Signin
 on:
   schedule:
    # 每天国际时间 17:20 运行一次, 中国时间 01:20
-    - cron: '20 1 * * *'
+    - cron: '20 23 * * *'
   workflow_dispatch:
 jobs:
   signin:
@@ -26,3 +26,4 @@ jobs:
           SMTP_PASSWORD: ${{ secrets.SMTP_PASSWORD }}
           SMTP_SENDER: ${{ secrets.SMTP_SENDER }}
           SMTP_RECEIVER: ${{ secrets.SMTP_RECEIVER }}
+          FEISHU_WEBHOOK: ${{ secrets.FEISHU_WEBHOOK }}
